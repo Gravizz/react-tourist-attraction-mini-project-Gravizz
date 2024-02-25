@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import linkIcon from "../component/link-icon.png";
 import axios from "axios";
 
 function TravelList() {
@@ -31,7 +32,7 @@ function TravelList() {
   };
 
   const handleLinkIconClick = (url) => {
-    navigator.clipboard.writeText(url);
+    window.open(url);
   };
 
   return (
@@ -90,7 +91,7 @@ function TravelList() {
                 </div>
                 <img
                   className="LinkIcon"
-                  src="src/component/link-icon.png"
+                  src={linkIcon}
                   onClick={() => {
                     handleLinkIconClick(item.url);
                   }}
