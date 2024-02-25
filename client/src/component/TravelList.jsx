@@ -12,7 +12,7 @@ function TravelList() {
   const Search = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:4001/trips?keywords=${keyword}`
+        `https://react-tourist-attraction-mini-project.onrender.com/trips?keywords=${keyword}`
       );
       setTravelList(result.data.data);
     } catch (error) {
